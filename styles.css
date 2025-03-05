@@ -8,12 +8,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-a,
-button {
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
 body {
   font-family: Arial, sans-serif;
   height: 100vh;
@@ -29,8 +23,7 @@ main {
 /* Sidebar */
 .sidebar {
   width: 80px;
-  /* Fixed sidebar width */
-  background: #23272A;
+  background: #23272a;
   color: white;
   display: flex;
   flex-direction: column;
@@ -41,13 +34,17 @@ main {
   height: 100vh;
 }
 
-.sidebar a {
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
   width: 50px;
-  /* Fixed width */
   height: 50px;
-  /* Fixed height */
-  background: #2C2F33;
-  margin: 10px 0;
+  background: #2c2f33;
+  margin: 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,21 +55,21 @@ main {
   position: relative;
   transition: background 0.3s;
   flex-shrink: 0;
-  /* Prevents shrinking */
+  cursor: pointer;
 }
 
-.sidebar a:hover {
-  background: #5865F2;
+.sidebar li:hover {
+  background: #5865f2;
 }
 
 /* Keep the selected item highlighted */
-.sidebar a.active {
-  background: #5865F2;
+.sidebar li.active {
+  background: #5865f2;
   border-radius: 25%;
 }
 
 /* Vertical line on the left when active */
-.sidebar a.active::before {
+.sidebar li.active::before {
   content: "";
   position: absolute;
   left: -10px;
@@ -85,16 +82,19 @@ main {
 /* Main Content */
 .main-content {
   flex-grow: 1;
-  background: #36393F;
+  background: #36393f;
   color: white;
   padding: 20px;
   overflow-y: auto;
   height: 100vh;
 }
 
-.content-box {
-  height: 2000px;
-  background: rgba(255, 255, 255, 0.1);
-  margin-top: 20px;
-  padding: 20px;
+/* Hide all content by default */
+.content {
+  display: none;
+}
+
+/* Show content when active */
+.content.active {
+  display: block;
 }

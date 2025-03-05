@@ -1,11 +1,27 @@
-// Select all navigation links
-const navLinks = document.querySelectorAll(".nav-item");
+document.addEventListener("DOMContentLoaded", function () {
+  const navItems = document.querySelectorAll(".nav-item");
 
-// Function to remove "active" from all and add to clicked one
-navLinks.forEach(link => {
-  link.addEventListener("click", function() {
-    navLinks.forEach(l => l.classList.remove("active")); // Remove active from all
-    this.classList.add("active"); // Add active to clicked one
+  navItems.forEach((item) => {
+    item.addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default action
+
+      // Remove active class from all nav items
+      navItems.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
+
+      // Get target ID
+      const targetId = this.getAttribute("data-target");
+
+      // Hide all content sections
+      document.querySelectorAll(".content").forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      // Show the clicked content
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.classList.add("active");
+      }
+    });
   });
 });
-
