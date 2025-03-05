@@ -1,15 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navItems = document.querySelectorAll(".nav-item");
 
-  // Set default active to "somethingElse"
-  const defaultActive = document.querySelector(
-    '.nav-item[data-target="somethingElse"]'
-  );
-  if (defaultActive) {
-    defaultActive.classList.add("active");
-    document.getElementById("somethingElse").classList.add("active");
-  }
-
   navItems.forEach((item) => {
     item.addEventListener("click", function (event) {
       event.preventDefault();
