@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const newNavItem = document.createElement("li");
         newNavItem.className = "nav-item";
         newNavItem.dataset.target = newServerId;
-        newNavItem.textContent = `Server ${serverCounter}`;
+        newNavItem.textContent = `${serverCounter}`;
 
         // Insert before the "+" item
         sidebarUl.insertBefore(newNavItem, target);
