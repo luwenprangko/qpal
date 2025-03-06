@@ -34,7 +34,7 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 80px;
+  width: 70px;
   background: #23272a;
   color: white;
   display: flex;
@@ -70,6 +70,14 @@ body {
   cursor: pointer;
 }
 
+hr {
+  display: block;
+  border: 1px solid #424242;
+  border-radius: 100px;
+  margin: 1em 0.5rem;
+  padding: 0;
+}
+
 .sidebar li:hover {
   background: #5865f2;
 }
@@ -86,7 +94,7 @@ body {
   width: 5px;
   height: 80%;
   background: #ccc;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
 }
 
 /* MAIN contentContainer */
