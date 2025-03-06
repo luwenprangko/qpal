@@ -9,7 +9,7 @@
 
 *::-webkit-scrollbar {
   width: 5px;
-  height: 5px; /* Ensures horizontal scrollbar is the same thickness */
+  height: 5px;
 }
 
 *::-webkit-scrollbar-track {
