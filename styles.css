@@ -7,12 +7,32 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; /* Ensures horizontal scrollbar is the same thickness */
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgb(255, 255, 255);
+  -webkit-border-radius: 1px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(181, 181, 181);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(120, 120, 120);
+}
+
 body {
   font-family: Arial, sans-serif;
   height: 100vh;
   display: flex;
 }
 
+/* SIDEBAR */
 .sidebar {
   width: 80px;
   background: #23272a;
@@ -69,20 +89,48 @@ body {
   border-radius: 5px;
 }
 
+/* MAIN CONTENT */
 .main-content {
   flex-grow: 1;
   background: #36393f;
   color: white;
-  padding: 20px;
-  overflow-y: auto;
-  height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
 }
 
+/* TOP MENU */
+.top-menu {
+  height: 50px;
+  background: #2c2f33;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.top-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.top-menu li {
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.top-menu li:hover {
+  color: #5865f2;
+}
+
+/* CONTENT SECTIONS */
 .content {
   display: none;
+  padding: 20px;
 }
 
 .content.active {
