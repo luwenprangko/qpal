@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      contentContainer="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" contentContainer="ie=edge" />
     <title>qPal</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -23,12 +25,13 @@
           </svg>
         </li>
         <li class="nav-item active" data-target="somethingElse">#</li>
-        <li class="nav-item" data-target="firstServer">1</li>
-        <li class="nav-item" data-target="addServer">+</li>
+        <!-- it will add a li if i click the addServer -->
+        <!-- <li class="nav-item" data-target="server1">1</li> -->
+        <li class="nav-item" data-target="servers">+</li>
       </ul>
     </nav>
 
-    <main class="main-content">
+    <main class="main-contentContainer">
       <header class="top-menu">
         <ul>
           <li class="menu-item">Home</li>
@@ -37,12 +40,15 @@
         </ul>
       </header>
 
-      <section class="content" id="profile"># username</section>
-      <section class="content active" id="somethingElse">
+      <section class="contentContainer" id="profile"># username</section>
+      <section class="contentContainer active" id="somethingElse">
         # somethingElse
       </section>
-      <section class="content" id="firstServer"># firstServer</section>
-      <section class="content" id="addServer"># addServer</section>
+      <section class="contentContainer" id="servers">
+        <!-- after adding a server, it will generate a div that are connecter to the server that added -->
+        <!-- <div id="server1"># serve1</div> -->
+      </section>
+      <section class="contentContainer" id="addServer"># addServer</section>
     </main>
 
     <script src="script.js"></script>

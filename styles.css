@@ -89,8 +89,8 @@ body {
   border-radius: 5px;
 }
 
-/* MAIN CONTENT */
-.main-content {
+/* MAIN contentContainer */
+.main-contentContainer {
   flex-grow: 1;
   background: #36393f;
   color: white;
@@ -127,12 +127,12 @@ body {
   color: #5865f2;
 }
 
-/* CONTENT SECTIONS */
-.content {
+/* contentContainer SECTIONS */
+.contentContainer {
   display: none;
   padding: 20px;
 }
 
-.content.active {
+.contentContainer.active {
   display: block;
 }
